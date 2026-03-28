@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uposażenie policjantów OPP/SPPP w 2026 r.</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header>
+    <div id="logo"><img src="logo1.png" alt="logo"></div>
+    <div id="tytul"><h1>Aspirant Schabowy - Blog</h1></div>
+</header>
+    <nav id="menu-glowne">
+        <a href="index.html">Strona Główna</a>
+        <a href="about.html">O mnie</a>
+        <a href="mailto:aspirantschabowy@gmail.com">Kontakt</a>
+        <a href="https://www.facebook.com/profile.php?id=100062090866410">Facebook</a>
+        <a href="https://www.instagram.com/aspirantschabowy/">Instagram</a>
+    </nav>
+
+    <section id="main">
+       <p> Wracamy do Prewencji- pora na Policjantów, którzy dbają o nasze bezpieczeństwo 
+            podczas różnego rodzaju imprez masowych: Policjantów pełniących służbę w jednym z 
+            Oddziałów Prewencji Policji lub Samodzielnym Pododdziale Prewencji Policji. 
+            Chcesz dowiedzieć się jak dodatek „betonowy” wpływa na wysokość uposażenia? 
+            Zajrzyj w kafelki.</p>
+             <div class="slider-container">
+        <input type="button" value="&larr;" class="prev" onclick="prevSlide()">
+
+            <img src="1.jpg" alt="post" class="opp active">
+            <img src="2.jpg" alt="post" class="opp">
+            <img src="3.jpg" alt="post" class="opp">
+            <img src="4.jpg" alt="post" class="opp">
+            <img src="5.jpg" alt="post" class="opp">
+            <img src="6.jpg" alt="post" class="opp">
+            <img src="7.jpg" alt="post" class="opp">
+            <img src="8.jpg" alt="post" class="opp">
+            <img src="9.jpg" alt="post" class="opp">
+            <img src="10.jpg" alt="post" class="opp">
+            <img src="11.jpg" alt="post" class="opp">
+            <img src="12.jpg" alt="post" class="opp">
+            <img src="13.jpg" alt="post" class="opp">
+             <input type="button" value="&rarr;" class="next" onclick="nextSlide()">
+    </div>
+            <script>
+let current = 0;
+const slides = document.querySelectorAll(".opp");
+
+function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[index].classList.add("active");
+}
+
+function nextSlide() {
+    current++;
+    if (current >= slides.length) current = 0;
+    showSlide(current);
+}
+
+function prevSlide() {
+    current--;
+    if (current < 0) current = slides.length - 1;
+    showSlide(current);
+}
+</script>
+</section>
+    <section id="nav">
+        <a href="index.html">Strona Główna</a><br>
+        <a href="about.html">O mnie</a><br>
+        <a href="mailto:aspirantschabowy@gmail.com">Kontakt</a><br>
+        <a href="https://www.facebook.com/profile.php?id=100062090866410">Facebook</a><br>
+        <a href="https://www.instagram.com/aspirantschabowy/">Instagram</a><br>
+    </section>
+    <footer>
+    <p>&copy; 2026 Aspirant Schabowy. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,145 @@
+/* --- Globalne style --- */
+* {
+    font-family: Helvetica, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+body {
+    background-color: #001f4d; /* ciemny niebieski */
+    text-align: center;
+}
+
+/* --- Nagłówek --- */
+#lewy, #srodek, #prawy {
+    background-color: blue;
+    height: 165px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#srodek h1 {
+    line-height: 165px; /* pionowe wyśrodkowanie w nagłówku */
+}
+
+/* --- Nawigacja --- */
+nav {
+    background-color: black;
+    clear: both;
+    padding: 10px 0;
+}
+
+nav a, #nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+nav a:hover, #nav a:hover {
+    text-decoration: underline;
+}
+
+/* --- Sekcja główna --- */
+#main {
+    float: left;
+    width: 75%;
+    padding: 40px;
+    background-color: blue;
+    text-align: left;
+    font-size: 30px;
+    min-height: 400px;
+}
+/* --- Boczna sekcja / linki --- */
+#nav {
+    float: right;
+    width: 25%;
+    padding: 40px 20px;
+    background-color: black;
+    text-align: left;
+    min-height: 400px;
+    min-height: 100vh;
+}
+
+#OPP {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin-top: 10px;
+}
+
+/* --- Stopka --- */
+footer {
+    clear: both;
+    background-color: black;
+    padding: 10px;
+    text-align: center;
+    font-size: smaller;
+}
+
+/* --- Prosta responsywność --- */
+@media (max-width: 768px) {
+    #main, #nav, #lewy, #srodek, #prawy {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    #OPP {
+        margin: 10px auto;
+    }
+}
+
+.opp {
+    display: none;       /* tylko aktywne zdjęcie będzie widoczne */
+    width: 400px;        /* zmniejszona szerokość */
+    height: auto;        /* zachowuje proporcje */
+    margin: 10px auto;   /* wyśrodkowanie */
+    border-radius: 8px;  /* opcjonalnie, ładne zaokrąglenie */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* delikatny cień */
+}
+
+.active {
+    display: block;
+}
+.slider-container {
+    position: relative;
+    width: 220px;       
+    margin: 20px auto;  
+}
+
+.opp {
+    display: none;
+    width: 400px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.active {
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 4px;
+}
+
+.prev {
+    left: -50px;   
+}
+
+.next {
+    right: -225px;  
+}
